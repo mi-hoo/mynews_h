@@ -37,6 +37,7 @@ class NewsController extends Controller
       // データベースに保存する
       $news->fill($form);
       $news->save();
+      \Debugbar::info($news);
       // admin/news/createにリダイレクトする
       return redirect('admin/news/create');
   }  
